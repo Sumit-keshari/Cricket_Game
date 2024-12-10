@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket_game</title>
+  <link rel="stylesheet" href="cricket.css">
+</head>
+
+<body>
+  <div id="main_container">
+    <div id="container">
+      <h1>Bat Bowl Stump Game</h1>
+      <div id="button-container">
+        <button class="buttons" onclick="
+          let userchoice='You choose bat';
+          let result;
+          let randomNumber = Math.floor(Math.random() * 3);
+          let computer_choice=''
+          if(randomNumber===0){
+            computer_choice='Stumps';
+          }
+          else if(randomNumber==1){
+            computer_choice='Bat';
+          }
+          else{
+            computer_choice='Bowl';
+          }
+          // check what the choice of computer then show the result;
+          if(computer_choice==='Stumps'){
+            result='Computer Won';
+          }
+          else if(computer_choice==='Bat'){
+            result='it is tie';
+          }
+          else{
+            result='User Won';
+          }
+          alert(`${userchoice}\nComputer choose ${computer_choice}\n${result}`);
+          ">Bat</button>
+        <button class="buttons" onclick="
+         userchoice='You choose Bowl';
+         randomNumber = Math.floor(Math.random() * 3);
+         computer_choice=''
+        if(randomNumber===0){
+          computer_choice='Stumps';
+        }
+        else if(randomNumber==1){
+          computer_choice='Bat';
+        }
+        else{
+          computer_choice='Bowl';
+        }
+        // check what the choice of computer then show the result;
+        if(computer_choice==='Stumps'){
+          result='User Won';
+        }
+        else if(computer_choice==='Bat'){
+          result='Computer Won';
+        }
+        else{
+          result='it is tie';
+        }
+        alert(`${userchoice}\nComputer choose ${computer_choice}\n${result}`);
+        ">Bowl</button>
+        <button class="buttons" onclick="
+         userchoice='You choose Stump';
+         result;
+         randomNumber = Math.floor(Math.random() * 3);
+         computer_choice=''
+        if(randomNumber===0){
+          computer_choice='Stumps';
+        }
+        else if(randomNumber==1){
+          computer_choice='Bat';
+        }
+        else{
+          computer_choice='Bowl';
+        }
+        // check what the choice of computer then show the result;
+        if(computer_choice==='Stumps'){
+          result='it is tie';
+        }
+        else if(computer_choice==='Bat'){
+          result='User Won';
+        }
+        else{
+          result='Computer won';
+        }
+        alert(`${userchoice}\nComputer choose ${computer_choice}\n${result}`);
+        ">Stump</button>
+      </div>
+    </div>
+  </div>
+  <script src="cricket.js"></script>
+</body>
+
+</html>
