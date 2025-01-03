@@ -14,83 +14,24 @@
       <h1>Bat Bowl Stump Game</h1>
       <div id="button-container">
         <button class="buttons" onclick="
-          let userchoice='You choose bat';
-          let result;
-          let randomNumber = Math.floor(Math.random() * 3);
-          let computer_choice=''
-          if(randomNumber===0){
-            computer_choice='Stumps';
-          }
-          else if(randomNumber==1){
-            computer_choice='Bat';
-          }
-          else{
-            computer_choice='Bowl';
-          }
-          // check what the choice of computer then show the result;
-          if(computer_choice==='Stumps'){
-            result='Computer Won';
-          }
-          else if(computer_choice==='Bat'){
-            result='it is tie';
-          }
-          else{
-            result='User Won';
-          }
-          alert(`${userchoice}\nComputer choose ${computer_choice}\n${result}`);
+          let computer_Score=randomchoice();
+          let result =getResult('Bat',computer_Score)
+          alerts('Bat',computer_Score,result)
           ">Bat</button>
         <button class="buttons" onclick="
-         userchoice='You choose Bowl';
-         randomNumber = Math.floor(Math.random() * 3);
-         computer_choice=''
-        if(randomNumber===0){
-          computer_choice='Stumps';
-        }
-        else if(randomNumber==1){
-          computer_choice='Bat';
-        }
-        else{
-          computer_choice='Bowl';
-        }
-        // check what the choice of computer then show the result;
-        if(computer_choice==='Stumps'){
-          result='User Won';
-        }
-        else if(computer_choice==='Bat'){
-          result='Computer Won';
-        }
-        else{
-          result='it is tie';
-        }
-        alert(`${userchoice}\nComputer choose ${computer_choice}\n${result}`);
-        ">Bowl</button>
+          computer_Score= randomchoice();
+          result=getResult('Bowl',computer_Score)
+          alerts('Bowl',computer_Score,result)
+          ">Bowl</button>
         <button class="buttons" onclick="
-         userchoice='You choose Stump';
-         result;
-         randomNumber = Math.floor(Math.random() * 3);
-         computer_choice=''
-        if(randomNumber===0){
-          computer_choice='Stumps';
-        }
-        else if(randomNumber==1){
-          computer_choice='Bat';
-        }
-        else{
-          computer_choice='Bowl';
-        }
-        // check what the choice of computer then show the result;
-        if(computer_choice==='Stumps'){
-          result='it is tie';
-        }
-        else if(computer_choice==='Bat'){
-          result='User Won';
-        }
-        else{
-          result='Computer won';
-        }
-        alert(`${userchoice}\nComputer choose ${computer_choice}\n${result}`);
-        ">Stump</button>
+          computer_Score= randomchoice();
+          result=getResult('Stumps',computer_Score)
+          alerts('stumps',computer_Score,result)
+          ">Stump</button>
       </div>
+      <button class="reset-btn" onclick="
+  resetbtn()
+  ">Reset button</button>
     </div>
   </div>
   <script src="cricket.js"></script>
